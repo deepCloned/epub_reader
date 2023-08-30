@@ -1,22 +1,16 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router'
+
+document.addEventListener('DOMContentLoaded', () => {
+  const html = document.querySelector('html')
+  let fontSize = window.innerWidth / 10
+  fontSize = fontSize > 50 ? 50 : fontSize
+  html.style.fontSize = fontSize + 'px'
+  console.log('html', html.style)
+})
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
   <RouterView />
 </template>
 
