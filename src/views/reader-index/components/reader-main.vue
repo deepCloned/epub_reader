@@ -1,5 +1,6 @@
 <script setup>
   import Epub from 'epubjs';
+  import TitleMenu from './title-menu.vue';
   import { ref, onMounted } from 'vue';
   
   let book = ref('')
@@ -36,9 +37,10 @@
     <div id="read"></div>
     <div class="operation-mask">
       <div class="left" @click="prevPage"></div>
-      <div class="center" @click="toggleMenu">center</div>
-      <div class="right" @click="nextPage">right</div>
+      <div class="center" @click="toggleMenu"></div>
+      <div class="right" @click="nextPage"></div>
     </div>
+    <title-menu></title-menu>
   </div>
 </template>
 
